@@ -10,7 +10,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "gerar-app": "ionic build && ionic cap copy && ionic cap sync && ionic cap open android"
+    "gerar-app": "ionic build && ionic cap copy && ionic cap sync && ionic cap open android",
+    "attGit": "git add . && git commit -m \"Atualização do projeto\" && git push origin main"
   },
   "private": true,
   "dependencies": {
