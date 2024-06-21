@@ -1,0 +1,24 @@
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-searchbar class="custom-searchbar" (ionInput)="search($event)"></ion-searchbar>
+  <ng-container *ngIf="!error; else errorContent">
+    <ion-card *ngFor="let filme of listaFilmes" (click)="openMovieDetails(filme.id)">
+      <img src="https://image.tmdb.org/t/p/w500/{{filme.backdrop_path}}" />
+      <ion-card-header>
+        <ion-card-title>{{filme.title}}</ion-card-title>
+        <ion-card-subtitle>Avaliação {{filme.vote_average}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        {{filme.overview}}
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+  <ng-template #errorContent class="ion-padding">
+    <div class="nothing-here">
+      <img src="assets/nd_small.gif" alt="">
+      <h4>Ops.. algo deu errado aqui <br> Estamos arrumando já.</h4>
+    </div>
+  </ng-template>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalhe dos Jogos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/games"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ gameDetails?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="gameDetails">
+  <ion-card>
+    <div class="game-header">
+      <img [src]="gameDetails.background_image" alt="{{ gameDetails.name }} Cover">
+    </div>
+    <ion-card-header>
+      <ion-card-title>{{ gameDetails.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Released:</strong> {{ gameDetails.released }}</p>
+      <p><strong>Rating:</strong> {{ gameDetails.rating }}</p>
+      <p><strong>Description:</strong> {{ gameDetails.description_raw }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+

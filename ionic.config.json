@@ -1,0 +1,7 @@
+{
+  "name": "CentralGeek",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

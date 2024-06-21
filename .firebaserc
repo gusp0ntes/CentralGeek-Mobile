@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "central-geek": {
+      "hosting": {
+        "app": [
+          "central-geek"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "central-geek"
+  }
+}

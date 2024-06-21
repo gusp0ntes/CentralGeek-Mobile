@@ -1,0 +1,72 @@
+.back-card {
+    height: 0;
+    transition: height 0.5s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+
+    .img-box {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: auto; 
+            height: auto; 
+            max-width: 50%; 
+            max-height: 50%; 
+            object-fit: cover; 
+            border-radius: 50%;
+            border: 5px solid #fff;
+        }
+    }
+
+    .dev-informations {
+        text-align: center;
+        margin-top: 20px;
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+
+            .icon-box-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .icon-box {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                border: 1px solid #fff;
+                
+                ion-icon {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.back-card.visible {
+    height: 450px; 
+}
+
+.versão {
+    color: gray;
+    padding: 1.2rem;
+}

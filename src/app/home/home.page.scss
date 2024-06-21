@@ -1,0 +1,42 @@
+.page-constructor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.page-constructor h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.page-constructor img {
+  width: 200px;
+  height: auto;
+}
+
+.home-content {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home-content h1 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+ion-card {
+  cursor: pointer;
+  margin: 0 auto;
+  max-width: 500px;
+}

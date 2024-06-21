@@ -1,0 +1,121 @@
+<ion-content [fullscreen]="true">
+  <div class="card-wrapper">
+    <ion-card class="front-card" (click)="toggleDetails()">
+      <ion-card-header>
+        Desenvolvedores
+      </ion-card-header>
+    </ion-card>
+    <ion-card class="back-card" [class.visible]="isDetailsVisible">
+      <ion-card-content class="card-content">
+        <div class="img-box">
+          <img src="assets/img-devs/desenvolvedor.png" alt="Desenvolvedor">
+        </div>
+        <div class="dev-informations">
+          <p><strong></strong>Gustavo Pontes da Silva</p>
+          <p><strong>Matricula: </strong>23108202</p>
+          <div class="social-icons">
+            <h3>Contact me:</h3>
+
+            <div class="icon-box-container">
+
+              <div class="icon-box" (click)="copyEmail('gustavopontes.dev@gmail.com')">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <a href="https://www.linkedin.com/in/gustavo-pontes-da-silva-848520263/">
+                <div class="icon-box"><ion-icon name="logo-linkedin"></ion-icon></div>
+              </a>
+
+              <a href="https://www.youtube.com/channel/UCYTZBHMBgHoLPMRYjchiJ1g">
+                <div class="icon-box"><ion-icon name="logo-youtube"></ion-icon></div>
+              </a>
+
+              <a href="/assets/curriculo.pdf" download="curriculo.pdf">
+                <div class="icon-box">
+                  <ion-icon name="document-outline"></ion-icon>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="back-card" [class.visible]="isDetailsVisible">
+      <ion-card-content class="card-content">
+        <div class="img-box">
+          <img src="assets/img-devs/bernardo.jpg" alt="Desenvolvedor">
+        </div>
+        <div class="dev-informations">
+          <p><strong>Name: </strong>Bernardo Gomes Giovannini Louzada</p>
+          <p><strong>Matricula: </strong>23108038</p>
+          <div class="social-icons">
+            <h3>Contact me:</h3>
+
+            <div class="icon-box-container">
+
+              <div class="icon-box" (click)="copyEmail('bernardo.louzada12@gmail.com')">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <a href="https://www.linkedin.com/in/bernardo-louzada/">
+                <div class="icon-box"><ion-icon name="logo-linkedin"></ion-icon></div>
+              </a>
+
+              <a href="https://www.youtube.com/channel/UCYTZBHMBgHoLPMRYjchiJ1g">
+                <div class="icon-box"><ion-icon name="logo-youtube"></ion-icon></div>
+              </a>
+
+              <a href="/assets/curriculo.pdf" download="curriculobernardo.pdf">
+                <div class="icon-box">
+                  <ion-icon name="document-outline"></ion-icon>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="back-card" [class.visible]="isDetailsVisible">
+      <ion-card-content class="card-content">
+        <div class="img-box">
+          <img src="assets/img-devs/anderson.jpg" alt="Desenvolvedor">
+        </div>
+        <div class="dev-informations">
+          <p><strong>Name: </strong>Anderson Goes Regula</p>
+          <p><strong>Matricula: </strong>23106547</p>
+          <div class="social-icons">
+            <h3>Contact me:</h3>
+
+            <div class="icon-box-container">
+
+              <div class="icon-box" (click)="copyEmail('goesanderson074@gmail.com')">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <a href="https://www.linkedin.com/in/andersongoes/">
+                <div class="icon-box"><ion-icon name="logo-linkedin"></ion-icon></div>
+              </a>
+
+              <a href="https://www.youtube.com/channel/UCYTZBHMBgHoLPMRYjchiJ1g">
+                <div class="icon-box"><ion-icon name="logo-youtube"></ion-icon></div>
+              </a>
+
+              <a href="" download="">
+                <div class="icon-box">
+                  <ion-icon name="document-outline"></ion-icon>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <p class="versão">Central Geek - v1.0</p>
+</ion-content>

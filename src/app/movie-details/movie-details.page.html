@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ movie?.title }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="'https://image.tmdb.org/t/p/w500/' + movie?.backdrop_path"></ion-img>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ movie?.title }}</ion-card-title>
+      <ion-card-subtitle>Avaliação {{ movie?.vote_average }}</ion-card-subtitle>
+      <ion-card-subtitle>Popularity {{ movie?.popularity }}</ion-card-subtitle>
+      <ion-card-subtitle>Classificação {{ movie?.genre_ids }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ movie?.overview }}</p>
+      <p><strong>Data de lançamento:</strong> {{ movie?.release_date }}</p>
+    </ion-card-content>
+    <ng-container *ngIf="videoUrl">
+      <div class="video-container">
+        <iframe [src]="videoUrl | safeUrl" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </ng-container>
+
+    <div *ngIf="reviews.length > 0; else noReviews">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Comentários:</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div *ngFor="let review of reviews">
+            <ion-card-header>
+              <ion-card-title>{{ review.author }}</ion-card-title>
+              <ion-card-subtitle>Nota: {{ review.author_details.rating || 'N/A' }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{ review.content }}</p>
+            </ion-card-content>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  
+    <ng-template #noReviews>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Comentários</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Não há comentários disponíveis.</p>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+    
+  </ion-card>
+</ion-content>
